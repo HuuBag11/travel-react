@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primarycolor: hsl(14,90%,53%);
+    --primaryColorLight: hsl(14,96%,91%);
+    --color-white: #FFF;
+    --color-black: #000;
+    --bgColor: #FFF;
+    --grayText: hsl(0,0%,51%);
+
+    --biggestFont: 1.5rem;
+    --h1Font: 2rem;
+    --h2Font: 1.25rem;
+    --h3Font: 1rem;
+    --normalFont: 0.938rem;
+    --smallFont: 0.813rem;
+    --smallestFont: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+
+    .justify-center{
+        justify-content: center;
+    }
+
+    .justify-between{
+        justify-content: space-between;
+    }
+
+    .flex-col{
+        flex-direction: column;
+    }
+}
+
+.grid{
+    display: grid;
+}
+
+p{
+    font-size: var(--smallFont);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img,video{
+    height: auto;
+    width: 100%;
+}
+
+.icon{
+    font-size: var(--h2Font);
+    cursor: pointer;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--borderRadius);
+    padding: 0.8rem 1rem;
+    color: var(--color-white);
+    background-color: var(--primaryColor);
+
+    &:hover{
+        transition: 0.3s ease;
+        color: var(--primaryColor);
+        background-color: var(--color-white);
+    }
+}
+
+.secTitle{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 1rem 0;
+    font-weight: 700;
+    color: var(--color-black);
+    flex-direction: column;
+    gap: 1rem;
+
+    p{
+        color: var(--color-black);
+        font-size: var(--normalFont);
+        font-weight: 400;
+    }
+}
+
+.sectionHeading{
+    padding-bottom: 1.5rem;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+::selection{
+    background-color: var(--primaryColorLight);
+    color: var(--primaryColor);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--primaryColorLight);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: var(--primaryColor);
+    border-radius: var(--borderRadius);
+}
