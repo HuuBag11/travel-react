@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --primarycolor: hsl(14,90%,53%);
-    --primaryColorLight: hsl(14,96%,91%);
+    --primarycolor: #004d00;
+    --primarycolorLight: rgb(230, 255, 230);
     --color-white: #FFF;
     --color-black: #000;
     --bgColor: #FFF;
@@ -83,11 +83,11 @@ img,video{
     border-radius: var(--borderRadius);
     padding: 0.8rem 1rem;
     color: var(--color-white);
-    background-color: var(--primaryColor);
+    background-color: var(--primarycolor);
 
     &:hover{
         transition: 0.3s ease;
-        color: var(--primaryColor);
+        color: var(--primarycolor);
         background-color: var(--color-white);
     }
 }
@@ -123,17 +123,17 @@ img,video{
 }
 
 ::selection{
-    background-color: var(--primaryColorLight);
-    color: var(--primaryColor);
+    background-color: var(--primarycolorLight);
+    color: var(--primarycolor);
 }
 
 ::-webkit-scrollbar{
     width: 10px;
-    background-color: var(--primaryColorLight);
+    background-color: var(--primarycolorLight);
 }
 
 ::-webkit-scrollbar-thumb{
     width: 10px;
-    background-color: var(--primaryColor);
+    background-color: var(--primarycolor);
     border-radius: var(--borderRadius);
 }
