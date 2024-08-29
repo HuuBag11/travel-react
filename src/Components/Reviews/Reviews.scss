@@ -1,0 +1,146 @@
+.review {
+  .section-container {
+    .text-wrapper {
+      span {
+        font-size: var(--smallFont);
+        display: block;
+        color: var(--primarycolor);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: var(--h2Font);
+        color: var(--color-black);
+        padding: 1rem 0;
+      }
+
+      p {
+        color: var(--color-black);
+      }
+
+      .stars {
+        gap: 0.4rem;
+        padding: 1rem 0;
+
+        svg {
+          color: var(--primarycolor);
+          font-size: var(--h3Font);
+          width: 25px;
+        }
+      }
+
+      .client-images {
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .item {
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow: 0 0 2px 2px rgb(251, 212, 194);
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      height: 250px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .review {
+    .section-container {
+      .text-wrapper {
+        span {
+          font-size: var(--normalFont);
+        }
+
+        h3 {
+          font-size: 20px;
+          color: var(--color-black);
+        }
+
+        p {
+          color: var(--color-black);
+          font-size: var(--normalFont);
+        }
+
+        .stars {
+          svg {
+            width: 25px;
+          }
+        }
+      }
+
+      .client-images {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+
+    .img-wrapper {
+      height: 250px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .review {
+    .section-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-wrapper {
+      span {
+        font-size: var(--normalFont);
+      }
+    }
+
+    .img-wrapper {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+@media (min-width: 1240px) {
+  .review {
+    .section-container {
+      .text-wrapper {
+        span {
+          font-size: var(--h3Font);
+        }
+
+        h3 {
+          font-size: var(--h1Font);
+        }
+
+        p{
+            font-size: var(--h3Font);
+        }
+      }
+
+      .img-wrapper{
+        height: 300px;
+      }
+    }
+  }
+}

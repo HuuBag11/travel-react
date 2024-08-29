@@ -72,3 +72,55 @@
         }
     }
 }
+
+@media (min-width: 768px){
+    .navBar{
+        .logo{
+            span{
+                font-size: var(--h2Font);
+            }
+        }
+
+        .btn-menu{
+            display: none;
+        }
+
+        .menu{
+            ul{
+                display: flex;
+                gap: 1rem;
+
+                li{
+                    font-size: var(--h3Font);
+                    font-weight: 500;
+                    padding: 1rem 0;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: var(--primarycolor);
+                        border-bottom: 1.5px solid var(--primarycolor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1240px){
+    .navBar{
+        padding: 2rem 6rem;
+
+        .menu{
+            ul{
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px){
+    .navBar{
+        padding: 2rem 14rem;
+    }
+}

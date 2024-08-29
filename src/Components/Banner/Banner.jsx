@@ -2,6 +2,11 @@ import "./Banner.scss";
 
 import Video from "../../assets/banner.mp4";
 
+const imagePP1 = "https://images.unsplash.com/photo-1533281808624-e9b07b4294ff?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const imagePP2 = "https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const imagePP3 = "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const imagePP4 = "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
 export const Banner = () => {
   return (
     <div className="banner">
@@ -31,6 +36,26 @@ export const Banner = () => {
             />
           </svg>
         </a>
+      </div>
+
+      <div className="popular-places">
+        <div className="content">
+          <h3>Popular Places</h3>
+          <ul className="images flex">
+            <li className="img-wrapper">
+              <img src={imagePP1} alt="popular image 1" />
+            </li>
+            <li className="img-wrapper">
+              <img src={imagePP2} alt="popular image 2" />
+            </li>
+            <li className="img-wrapper">
+              <img src={imagePP3} alt="popular image 3" />
+            </li>
+            <li className="img-wrapper">
+              <img src={imagePP4} alt="popular image 4" />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

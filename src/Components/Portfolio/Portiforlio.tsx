@@ -19,7 +19,7 @@ export const Portiforlio = () => {
         </div>
 
         <div className="grid">
-          <div className="single-porifolio flex">
+          <div className="single-portiforlio flex">
             <div className="icon">
               <img src={image1} alt="" />
             </div>
@@ -32,7 +32,7 @@ export const Portiforlio = () => {
               </p>
             </div>
           </div>
-          <div className="single-porifolio flex">
+          <div className="single-portiforlio flex">
             <div className="icon">
               <img src={image2} alt="" />
             </div>
@@ -45,7 +45,7 @@ export const Portiforlio = () => {
               </p>
             </div>
           </div>
-          <div className="single-porifolio flex">
+          <div className="single-portiforlio flex">
             <div className="icon">
               <img src={image3} alt="" />
             </div>

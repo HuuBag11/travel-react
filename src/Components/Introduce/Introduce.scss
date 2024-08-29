@@ -28,3 +28,23 @@
         }
     }
 }
+
+@media (min-width: 640px){
+    .introduce{
+        .section-container{
+            .grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media (min-width: 800px){
+    .introduce{
+        .section-container{
+            .grid{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}

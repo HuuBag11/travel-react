@@ -1,0 +1,96 @@
+.footer{
+    background-color: var(--primarycolorLight);
+    padding: 2rem 0;
+
+    .section-container{
+        gap: 1.5rem;
+        text-align: center;
+        align-items: flex-start;
+
+        .logo-wrapper{
+            .footer-logo{
+                display: flex;
+                color: var(--color-black);
+                font-weight: 500;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 0.5rem;
+
+                .icon{
+                    font-size: 25px;
+                    color: var(--coclor-black);
+                }
+            }
+        }
+
+        .socials{
+            gap: 0.5rem;
+            margin: auto;
+            justify-content: center;
+
+            .icon{
+                font-size: 25px;
+                background-color: var(--primarycolor);
+                border-radius: 50%;
+                padding: 8px;
+                color: var(--color-white);
+
+                &:hover{
+                    background-color: var(--primarycolorLight);
+                }
+            }
+        }
+
+        .footer-links{
+            display: grid;
+            row-gap: 0.2rem;
+
+            .link-title{
+                padding-bottom: 0.5rem;
+                color: var(--color-black);
+                font-weight: 700;
+            }
+
+            li{
+                &:hover{
+                    transform: translate(10px);
+
+                    a{
+                        color: var(--primarycolor);
+                    }
+                }
+            }
+
+            a, .phone,.email{
+                color: var(--color-black);
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px){
+    .footer{
+        .section-container{
+            grid-template-columns: repeat(2,1fr);
+            align-items: start !important;
+            align-items: center;
+
+            .footer-links{
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 640px){
+    .footer{
+        .section-container{
+            padding: 2rem 0;
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}

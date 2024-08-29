@@ -73,7 +73,7 @@ export const Destination = () => {
   return (
     <div className="destination section container">
       <div className="section-container">
-        <div>
+        <div className="secTitle">
           <span>Explore now</span>
           <h3>Find Your Dream Destination</h3>
           <p>
