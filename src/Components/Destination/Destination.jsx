@@ -1,3 +1,4 @@
+import React, {useEffect} from "react";
 import "./Destination.scss";
 import { DestinationSingle } from "./DestinationSingle";
 
@@ -69,11 +70,17 @@ const destinations = [
     }
 ];
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export const Destination = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  })
   return (
     <div className="destination section container">
       <div className="section-container">
-        <div className="secTitle">
+        <div className="secTitle" data-aos="fade-up">
           <span>Explore now</span>
           <h3>Find Your Dream Destination</h3>
           <p>
@@ -82,7 +89,7 @@ export const Destination = () => {
         </div>
 
         <div className="search-field grid">
-          <div className="input-field flex">
+          <div className="input-field flex" data-aos="fade-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -104,7 +111,7 @@ export const Destination = () => {
             </svg>
             <input type="text" placeholder="Location" />
           </div>
-          <div className="input-field flex">
+          <div className="input-field flex" data-aos="fade-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -121,7 +128,7 @@ export const Destination = () => {
             </svg>
             <input type="text" placeholder="Budget" />
           </div>
-          <div className="input-field flex">
+          <div className="input-field flex" data-aos="fade-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -138,7 +145,7 @@ export const Destination = () => {
             </svg>
             <input type="text" placeholder="Date" />
           </div>
-          <button className="btn flex">
+          <button className="btn flex" data-aos="fade-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -157,7 +164,7 @@ export const Destination = () => {
           </button>
         </div>
 
-        <div className="section-menu">
+        <div className="section-menu" data-aos="fade-up">
           <ul className="flex">
             {destinationTypes.map((item) => (
               <li key={item}>{item}</li>
@@ -168,7 +175,7 @@ export const Destination = () => {
         <div className="destination-container grid">
           {
             destinations.map((destination) => (
-                <DestinationSingle key={destination} img={destination.img} name={destination.name} location={destination.location} rating={destination.rating}   />
+                <DestinationSingle key={destination} img={destination.img} name={destination.name} location={destination.location} rating={destination.rating} />
             ))
           }
         </div>
@@ -176,3 +183,5 @@ export const Destination = () => {
     </div>
   );
 };
+
+

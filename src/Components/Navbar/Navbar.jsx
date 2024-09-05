@@ -1,15 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.scss";
+import { MenuAnimate } from "./MenuAnimate";
+
+import imageLogoGreen from "../../assets/logo-no-background.svg";
+import imageLogoWhite from "../../assets/logo-white-no-background.svg";
 
 const Navbar = () => {
   const [navBar, setNavbar] = useState(false);
+  const [scrollClass, setScrollClass] = useState("");
+  const [imageLogo, setImageLogo] = useState(imageLogoWhite); 
   const showNavBar = () => {
     setNavbar((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrollClass("on-scroll");
+        setImageLogo(imageLogoGreen);
+      } else {
+        setScrollClass("");
+        setImageLogo(imageLogoWhite);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="navBar">
-      <div className="logo">RYOTravel</div>
+    <div className={`navBar ${scrollClass}`}>
+      <div className="logo">
+        <img src={imageLogo} alt="logo" />
+      </div>
+
+      <MenuAnimate />
 
       <div className={`${navBar ? "open" : ""} menu`}>
         <ul>
@@ -20,7 +49,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <button className="button-signup btn">Sign up</button>
+      <button className="button-signup btn">Book Now</button>
 
       <div className="btn-menu" onClick={showNavBar}>
         {navBar ? (

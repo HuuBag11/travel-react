@@ -53,6 +53,7 @@
             }
 
             li{
+                transition: all 0.3s ease-in;
                 &:hover{
                     transform: translate(10px);
 

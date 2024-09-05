@@ -84,9 +84,11 @@ img,video{
     padding: 0.8rem 1rem;
     color: var(--color-white);
     background-color: var(--primarycolor);
+    border: 1px solid var(--primarycolor);
+    font-weight: 500;
+    transition: all 0.3s ease;
 
     &:hover{
-        transition: 0.3s ease;
         color: var(--primarycolor);
         background-color: var(--color-white);
     }
@@ -131,16 +133,16 @@ img,video{
     color: var(--primarycolor);
 }
 
-::-webkit-scrollbar{
-    width: 10px;
-    background-color: var(--primarycolorLight);
-}
+// ::-webkit-scrollbar{
+//     width: 10px;
+//     background-color: var(--primarycolorLight);
+// }
 
-::-webkit-scrollbar-thumb{
-    width: 10px;
-    background-color: var(--primarycolor);
-    border-radius: var(--borderRadius);
-}
+// ::-webkit-scrollbar-thumb{
+//     width: 10px;
+//     background-color: var(--primarycolor);
+//     border-radius: var(--borderRadius);
+// }
 
 @media (min-width: 800px){
     .section{

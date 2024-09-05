@@ -10,7 +10,7 @@ import React from "react"
 
 export const DestinationSingle = ({id, img, name, location, rating}) => {
   return (
-    <div className="single-destination">
+    <div className="single-destination" data-aos="fade-up">
       <div className="img-container">
         <img src={img} alt="destination image" />
       </div>

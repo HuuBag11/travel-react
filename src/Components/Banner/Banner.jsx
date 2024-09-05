@@ -1,3 +1,4 @@
+import React, {useEffect} from "react";
 import "./Banner.scss";
 
 import Video from "../../assets/banner.mp4";
@@ -7,13 +8,19 @@ const imagePP2 = "https://images.unsplash.com/photo-1530789253388-582c481c54b0?q
 const imagePP3 = "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const imagePP4 = "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export const Banner = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  })
   return (
     <div className="banner">
       <div className="video-bg">
         <video src={Video} autoPlay loop muted></video>
       </div>
-      <div className="sectionText">
+      <div className="sectionText" data-aos="fade-up">
         <h1>Unblock travel dream with us!</h1>
         <p>
           Discover the world's most adventurous nature, life is so short for a
@@ -38,7 +45,7 @@ export const Banner = () => {
         </a>
       </div>
 
-      <div className="popular-places">
+      <div className="popular-places" data-aos="fade-up">
         <div className="content">
           <h3>Popular Places</h3>
           <ul className="images flex">

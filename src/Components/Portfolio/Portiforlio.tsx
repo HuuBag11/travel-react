@@ -1,16 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Portiforlio.scss";
 
 import image1 from "../../assets/Safety.png";
 import image2 from "../../assets/Location.png";
 import image3 from "../../assets/Support.jpg";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export const Portiforlio = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  })
   return (
     <div className="portiforlio section container">
       <div className="section-container grid">
         <div className="content-left">
-          <div className="sectionHeading">
+          <div className="sectionHeading" data-aos="fade-up">
             <h3>Why should you choose us</h3>
             <p>
               We have extensive knowledge and experience in the travel industry.
@@ -19,7 +25,7 @@ export const Portiforlio = () => {
         </div>
 
         <div className="grid">
-          <div className="single-portiforlio flex">
+          <div className="single-portiforlio flex" data-aos="fade-up">
             <div className="icon">
               <img src={image1} alt="" />
             </div>
@@ -32,7 +38,7 @@ export const Portiforlio = () => {
               </p>
             </div>
           </div>
-          <div className="single-portiforlio flex">
+          <div className="single-portiforlio flex" data-aos="fade-up">
             <div className="icon">
               <img src={image2} alt="" />
             </div>
@@ -45,7 +51,7 @@ export const Portiforlio = () => {
               </p>
             </div>
           </div>
-          <div className="single-portiforlio flex">
+          <div className="single-portiforlio flex" data-aos="fade-up">
             <div className="icon">
               <img src={image3} alt="" />
             </div>

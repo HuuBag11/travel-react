@@ -1,0 +1,46 @@
+.menu-animate{
+    height: auto;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    .list-item{
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        width: fit-content;
+        border-radius: 100px;
+        border: 2px solid var(--color-black);
+        background-color: var(--color-white);
+        padding: 4px;
+        list-style: none;
+
+        li{
+            position: relative;
+            z-index: 10;
+            display: block;
+            cursor: pointer;
+            padding:6px 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--color-white);
+            mix-blend-mode: difference;
+
+            a{
+                color: currentColor;
+            }
+        }
+
+        .cursor{
+            position: absolute;
+            z-index: 0;
+            height: 30px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: var(--primarycolor);
+            mix-blend-mode: unset;
+        }
+    }
+}

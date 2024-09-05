@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Reviews.scss";
 
 import user1 from "../../assets/users/user1.jpg";
@@ -7,13 +7,19 @@ import user3 from "../../assets/users/user3.jpg";
 import user4 from "../../assets/users/user4.jpg";
 import user5 from "../../assets/users/user5.jpg";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const imageUsers = [user1,user2,user3,user4];
 
 export const Reviews = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  })
   return (
     <div className="review section container">
       <div className="section-container grid">
-        <div className="text-wrapper">
+        <div className="text-wrapper" data-aos="fade-up">
           <span>From our clients</span>
           <h3>Real travel history from our belowed clients</h3>
           <p>
@@ -44,7 +50,7 @@ export const Reviews = () => {
             })}
           </div>
 
-          <div className="client-images flex">
+          <div className="client-images flex" data-aos="fade-up">
             {
             imageUsers.map((user, index) => {
               return (
@@ -56,7 +62,7 @@ export const Reviews = () => {
           </div>
         </div>
 
-        <div className="img-wrapper">
+        <div className="img-wrapper" data-aos="fade-up">
           <img src={user5} alt="" />
         </div>
       </div>
