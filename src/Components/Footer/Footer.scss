@@ -1,6 +1,9 @@
 .footer{
-    background-color: var(--primarycolorLight);
+    background: url('../../assets/shape-footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2rem 0;
+    padding-top: 4rem;
 
     .section-container{
         gap: 1.5rem;

@@ -41,10 +41,12 @@
                 .sectionHeading{
                     h3{
                         font-size: var(--h2Font);
+                        text-align: center;
                     }
 
                     p{
                         font-size: var(--normalFont);
+                        text-align: center;
                     }
                 }
 
@@ -85,6 +87,7 @@
 
                 p{
                     font-size: var(--h3Font);
+                    margin-top: 1rem;
                 }
             }
 
@@ -103,13 +106,15 @@
     .portiforlio{
         .section-container{
             .content-left{
+                .sectionHeading{
                 h3{
-                    font-size: var(--h2Font);
+                    font-size: 1.6rem;
                 }
 
                 p{
                     font-size: var(--h3Font);
                 }
+            }
             }
 
             .grid{

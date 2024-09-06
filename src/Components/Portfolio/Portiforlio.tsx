@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import "./Portiforlio.scss";
 
-import image1 from "../../assets/Safety.png";
-import image2 from "../../assets/Location.png";
-import image3 from "../../assets/Support.jpg";
+import image1 from "../../assets/ticket.svg";
+import image2 from "../../assets/medal.svg";
+import image3 from "../../assets/hot-air-balloon.svg";
 
 import Aos from "aos";
 import "aos/dist/aos.css";

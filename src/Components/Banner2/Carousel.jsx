@@ -1,6 +1,6 @@
 import { HeartFilled, LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Rating from './Rating';
 
 function Carousel({ data, onActiveChange }) {
@@ -32,6 +32,13 @@ function Carousel({ data, onActiveChange }) {
       }))
     );
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      next();
+    }, 10000);
+    return () => clearInterval(intervalId);
+  }, [next]);
 
   return (
     <div className="carousel">

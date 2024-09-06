@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import './Banner.scss';
-import { Button, Input, Layout, Menu } from 'antd';
-import { Content, Footer, Header } from 'antd/es/layout/layout';
-import { ArrowRightOutlined, SearchOutlined } from '@ant-design/icons';
+import { Button, Input, Layout } from 'antd';
+import { Content } from 'antd/es/layout/layout';
+import { ArrowRightOutlined } from '@ant-design/icons';
 import TimeSlide from './TimeLine';
 import { TRAVEL_PAGE_LOCATIONS } from './data';
 import Carousel from './Carousel';
 import { useSpring, animated } from '@react-spring/web';
+import { NavBar2 } from '../NavBar2/NavBar';
 
-const menuItems = [
-  { key: 1, label: 'News' },
-  { key: 2, label: 'Destinations' },
-  { key: 3, label: 'Blog' },
-  { key: 4, label: 'Contact' }
-];
+import imageShape from "../../assets/shape-bottom-image.svg"
 
 export const Banner2 = () => {
   const [selectedSlide, setSelectedSlide] = useState(0);
@@ -39,16 +35,7 @@ export const Banner2 = () => {
   return (
     <div className="travel-container" style={{ backgroundImage: `url(${locations[selectedSlide].background})` }}>
       <Layout className="layout">
-        <Header className="header">
-          <div className="demo-logo ">LOGO</div>
-          <Menu className="nav" theme="dark" mode="horizontal" defaultSelectedKeys={['1']} items={menuItems} />
-          <div className="profile">
-            <div>
-              <Button shape="circle" icon={<SearchOutlined color="black" />} />
-            </div>
-            <div>Hello, Truong!</div>
-          </div>
-        </Header>
+        <NavBar2 />
         <Content className="content">
           <div className="left">
             <TimeSlide total={locations.length} active={selectedSlide} />
@@ -63,7 +50,7 @@ export const Banner2 = () => {
             </animated.div>
 
             <div>
-              <Button className="explore-btn" type="primary">
+              <Button className="explore-btn btn secondary" type="primary" value="Explore">
                 Explore
                 <ArrowRightOutlined />
               </Button>
@@ -72,6 +59,8 @@ export const Banner2 = () => {
           <div className="right">
             <Carousel data={locations.map((loc) => ({ id: loc.id, link: loc.thumbnail, name: loc.name }))} onActiveChange={onActiveChange} />
           </div>
+
+          <img src={imageShape} className="image-shape" alt="" />
         </Content>
       </Layout>
     </div>
