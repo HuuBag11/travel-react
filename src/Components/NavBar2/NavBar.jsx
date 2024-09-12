@@ -4,6 +4,8 @@ import { Button, Menu, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import {Link} from 'react-router-dom'
 
+import "./NavBar.scss"
+
 const menuItems = [
   { key: 0, label: "Home", path: "/" },
   { key: 1, label: "News", path: "/news" },
@@ -27,8 +29,10 @@ export const NavBar2 = () => {
         }
     }, [activeSearch]);
   return (
-    <Header className="header">
-      <div className="demo-logo ">LOGO</div>
+    <Header className="header navbar-2">
+      <div className="demo-logo ">
+        <Link to="/">LOGO</Link>
+      </div>
       <Menu
         className="nav"
         theme="dark"
@@ -49,7 +53,9 @@ export const NavBar2 = () => {
         <Input ref={inputRef} placeholder="Enter the keyword..." />
           <Button shape="circle" icon={<SearchOutlined color="black" />} onClick={handleActiveSearch} />
         </div>
-        <div className="book__now">Book Now</div>
+        <div className="book__now">
+          <Link to="/login">Book Now</Link>
+        </div>
       </div>
     </Header>
   );

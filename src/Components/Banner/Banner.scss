@@ -1,4 +1,11 @@
 .banner{
+    &.banner-video{
+        header{
+            position: absolute;
+            width: 100%;
+        }
+    }
+    
     .video-bg{
         width: 100%;
         height: 95vh;

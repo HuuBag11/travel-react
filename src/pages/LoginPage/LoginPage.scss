@@ -63,11 +63,12 @@ $yellow: #EB662B;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 300px;
+    width: 400px;
     padding: 25px;
-    background: rgba(255, 255, 255, .13);
+    background: rgba(255, 255, 255, .4);
+    // background-color: var(--color-white);
     border-radius: 2 * $borderRadius;
-    color: #fff;
+    color: var(--color-black);
     @include box-shadow(0px 0px 16px 9px rgba(0,0,0,0.07));
 }
 
@@ -83,8 +84,9 @@ $yellow: #EB662B;
     position: relative;
     span {
         font-size: 13px;
-        font-weight: 300;
-        color: rgba(255,255,255,.65);
+        font-weight: 400;
+        // color: rgba(255,255,255,.65);
+        color: var(--color-black);
     }
 }
 
@@ -93,7 +95,7 @@ $yellow: #EB662B;
     margin-bottom: 2px;
     @include transition(all .25s $transitionEasing .3s);
     .form-block--is-signup & {
-        height: calc(4 * $inputHeight + 15px);
+        height: calc(4 * $inputHeight + 23px);
         @include transition(all .5s $transitionEasing .2s);
     }
 }
@@ -110,19 +112,24 @@ $yellow: #EB662B;
 .form-group__input {
     display: block;
     font-size: 15px;
-    color: #fff;
+    color: var(--color-black);
     width: 100%;
     box-sizing: border-box;
     font-size: 16px;
     padding: 14px 10px;
     margin-bottom: 15px;
-    background: rgba(255,255,255,.25);
+    // background: rgba(255,255,255,.25);
     border: 1px solid rgba(255,255,255,.1);
+    // border: 1px solid var(--color-black);
+    background-color: var(--color-white);
     border-radius: $borderRadius;
+    &::placeholder{
+        color: var(--color-black);
+    }
     &:focus {
         outline: none;
-        border: 1px solid #fff;
-        background: transparent;
+        // background: transparent;
+        border: 1px solid var(--grayText);
     }
     .form-block--is-signup & {
         transform: translateX(-$offset);
@@ -187,7 +194,7 @@ input[type="checkbox"] {
             right: 0;
             width: 43px;
             height: 8px;
-            background: rgba(255, 255, 255, .4);
+            background: rgba(255, 255, 255, 1);
             cursor: pointer;
             @include border-radius(50px);
         }

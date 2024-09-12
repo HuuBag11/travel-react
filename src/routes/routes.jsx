@@ -76,6 +76,7 @@ const AppRoutes = () => (
         </Route>
         <Route path="/login" element={
             <>
+            <NavBar2 />
             <LoginComponent onSubmit={function(){console.log("submit")}} />
             </>
             } />

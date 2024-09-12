@@ -129,6 +129,12 @@ img,video{
     padding-right: 1.5rem;
 }
 
+span.error{
+    color: red;
+    font-size: 13px;
+    font-weight: 400;
+}
+
 ::selection{
     background-color: var(--primarycolorLight);
     color: var(--primarycolor);

@@ -10,13 +10,15 @@ const imagePP4 = "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { NavBar2 } from "../NavBar2/NavBar";
 
 export const Banner = () => {
   useEffect(()=>{
     Aos.init({duration: 2000})
   })
   return (
-    <div className="banner">
+    <div className="banner banner-video">
+      <NavBar2 />
       <div className="video-bg">
         <video src={Video} autoPlay loop muted></video>
       </div>
