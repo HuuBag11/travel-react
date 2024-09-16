@@ -17,6 +17,13 @@
             object-fit: cover;
             object-position: bottom;
         }
+
+        .image-shape{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+        }
     }
 
     .sectionText{

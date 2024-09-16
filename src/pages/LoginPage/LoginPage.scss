@@ -107,6 +107,12 @@ $yellow: #EB662B;
         left: $offset;
         width: 100%;
     }
+
+    &.hidden{
+        span.error{
+            display: none;
+        }
+    }
 }
 
 .form-group__input {

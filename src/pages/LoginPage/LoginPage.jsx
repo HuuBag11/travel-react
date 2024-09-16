@@ -1,6 +1,8 @@
+// LoginComponent.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.scss";
+import { useAuth } from "../../store/AuthContext";
 
 const dataUsers = [
   {
@@ -11,7 +13,7 @@ const dataUsers = [
 ];
 
 const errors = {
-  notUser: "Invalid password or password",
+  notUser: "Invalid username or password",
   notMatchPass: "Passwords do not match",
 };
 
@@ -19,15 +21,23 @@ const LoginComponent = ({ onSubmit }) => {
   const [mode, setMode] = useState("login");
   const [errorMessages, setErrorMessages] = useState({});
   const navigate = useNavigate();
+  const { login, openNotification } = useAuth();
 
   const toggleMode = () => {
     setMode((prevMode) => (prevMode === "login" ? "signup" : "login"));
   };
 
+  const handleOpenNoti = (name) => {
+    openNotification({
+      message: "Login successful!",
+      description: `Hi ${name}, welcome to my website. Wish you a great experience.`,
+      pauseOnHover: true,
+    });
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Get form elements
     const form = event.target;
     const username = form.username.value;
     const password = form.password.value;
@@ -44,18 +54,18 @@ const LoginComponent = ({ onSubmit }) => {
         } else {
           setErrorMessages({});
           if (onSubmit) onSubmit();
+          login(userData.name);
           navigate("/");
+          handleOpenNoti(userData.name);
         }
       } else {
         setErrorMessages({ name: "user", message: errors.notUser });
       }
     } else {
-      // Register logic
       if (createpassword !== repeatpassword) {
         setErrorMessages({ name: "pass", message: errors.notMatchPass });
         return;
       }
-      // Successful registration logic here
       setErrorMessages({});
       setMode("registered");
       navigate("/login");
@@ -170,6 +180,7 @@ const Input = ({ id, name, type, label, disabled }) => (
     className="form-group__input"
     type={type}
     id={id}
+    name={name}
     placeholder={label}
     disabled={disabled}
   />

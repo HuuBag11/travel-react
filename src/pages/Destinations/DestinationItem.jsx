@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 export const DestinationItem = ({ id, img, name, location, rating }) => {
   return (
     <div className="single-destination" data-aos="fade-up">
       <div className="img-container">
+        <Link to={`/destinations/${id}`}>
         <img src={img} alt="destination image" />
+        </Link>
       </div>
       <div className="desc-info">
         <div className="text flex">

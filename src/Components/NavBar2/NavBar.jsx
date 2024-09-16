@@ -5,6 +5,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import {Link} from 'react-router-dom'
 
 import "./NavBar.scss"
+import { useAuth } from "../../store/AuthContext";
 
 const menuItems = [
   { key: 0, label: "Home", path: "/" },
@@ -18,6 +19,7 @@ const menuItems = [
 export const NavBar2 = () => {
     const [activeSearch, setActiveSearch] = useState(false);
     const inputRef = useRef(null);
+    const { isLoggedIn, userName } = useAuth();
     
     const handleActiveSearch = () =>{
         setActiveSearch(prev => !prev)
@@ -54,7 +56,13 @@ export const NavBar2 = () => {
           <Button shape="circle" icon={<SearchOutlined color="black" />} onClick={handleActiveSearch} />
         </div>
         <div className="book__now">
-          <Link to="/login">Book Now</Link>
+          {
+            isLoggedIn ? (
+              <Link to="/my-account">Hi, {userName}</Link>
+            ) : (
+              <Link to="/login">Book now</Link>
+            )
+          }
         </div>
       </div>
     </Header>

@@ -8,6 +8,8 @@ const imagePP2 = "https://images.unsplash.com/photo-1530789253388-582c481c54b0?q
 const imagePP3 = "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const imagePP4 = "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
+import imageShape from "../../assets/shape-bottom-image.svg"
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { NavBar2 } from "../NavBar2/NavBar";
@@ -21,6 +23,7 @@ export const Banner = () => {
       <NavBar2 />
       <div className="video-bg">
         <video src={Video} autoPlay loop muted></video>
+        <img src={imageShape} className="image-shape" alt="" />
       </div>
       <div className="sectionText" data-aos="fade-up">
         <h1>Unblock travel dream with us!</h1>

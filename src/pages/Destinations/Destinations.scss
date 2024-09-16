@@ -1,6 +1,58 @@
 .destinations {
   margin-top: 4rem;
 
+  .filter-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 4rem;
+    gap: 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--primarycolor);
+
+    .select{
+      text-align: left;
+      background-color: var(--color-white);
+      border-radius: 12px;
+      cursor: pointer;
+      color: var(--color-black);
+      border: none;
+      outline: none;
+
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      height: 37px;
+      // appearance: none;
+      // background-image: url('data:image/svg+xml;utf8, <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.8247 1.08749L6.00292 5.90999L1.18042 1.08749" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      // background-repeat: no-repeat;
+      // background-position: right 18px center;
+
+      .ant-select-selector{
+        border: none;
+      }
+
+      svg{
+        font-size: 1rem;
+      }
+    }
+
+    button{
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      svg{
+        font-size: 1rem;
+      }
+    }
+  }
+
   .list-location {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
