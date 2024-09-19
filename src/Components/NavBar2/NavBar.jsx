@@ -11,7 +11,7 @@ const menuItems = [
   { key: 0, label: "Home", path: "/" },
   { key: 1, label: "News", path: "/news" },
   { key: 2, label: "Destinations", path: "/destinations" },
-  { key: 3, label: "Blogs", path: "/blogs" },
+  { key: 3, label: "About Us", path: "/about-us" },
   { key: 4, label: "Contact", path: "contact" },
 ];
 

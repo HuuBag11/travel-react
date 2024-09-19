@@ -8,6 +8,8 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import "./DestinationDetail.scss";
 
 import { Carousel } from "antd";
+import { CateDestination } from "../../Components/CategoryDestination/CateDestinations";
+import { FormBooking } from "../../Components/FormBooking/FormBooking";
 const contentStyle = {
   margin: 0,
   height: "160px",
@@ -51,6 +53,8 @@ export const DestinationDetail = () => {
           <div className="desc">{destination.description}</div>
         </div>
       </div>
+      <CateDestination />
+      <FormBooking />
       <div className="top-destination">
         <h3>Recommended Destinations</h3>
         <Carousel

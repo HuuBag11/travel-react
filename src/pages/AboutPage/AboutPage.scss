@@ -1,0 +1,132 @@
+.about-page {
+  header {
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+  }
+  .about-banner {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    h1 {
+      font-size: 5rem;
+      color: var(--color-white);
+    }
+
+    a {
+      margin-top: 20px;
+      color: var(--color-white);
+      padding: 6px 30px;
+      border: 1px solid var(--color-white);
+      background-color: transparent;
+      font-size: 20px;
+
+      display: flex;
+      align-content: center;
+    }
+
+    .circle-text {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateY(50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text {
+      font-weight: 700;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: var(--color-white);
+      white-space: nowrap;
+    }
+
+    // container video
+    .container-popup {
+      .btn-play-video {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        //border: 2px solid #ccc;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::after{
+            content: "Open video";
+            font-size: 12px;
+            color: var(--color-white);
+            position: absolute;
+            left: 100%;
+            width: max-content;
+            top: 50%;
+            transform: translate(10px,-50%);
+        }
+
+        &:hover{
+            .icon-play{
+                color: var(--primarycolor);
+                transform:translate(-50%, -50%) scale(1.08);
+            }
+
+            &::after{
+                transition: color 1s ease;
+                color: var(--primarycolor);
+            }
+          }
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        font-size: 30px;
+        color: var(--color-white);
+        transition: color 2s ease, transform 1s ease;
+      }
+
+      .container-video{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        transform: translateY(-100%);
+        transition: transform 1s ease;
+
+        &.show{
+            transform: translate(0);
+        }
+
+        .backdrop{
+            background: rgba(0, 0, 0, .4);
+            width: 100%;
+            height: 100vh;
+            cursor: zoom-out;
+        }
+
+        video{
+            width: 60%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+      }
+    }
+  }
+}

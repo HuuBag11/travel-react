@@ -19,6 +19,7 @@ import { listDestinations } from "../pages/Destinations/dataDestinations";
 import LoginComponent from "../pages/LoginPage/LoginPage";
 import { useAuth } from "../store/AuthContext";
 import { DestinationDetail } from "../pages/DestinationDetail/DestinationDetail";
+import { AboutPage } from "../pages/AboutPage/AboutPage";
 
 // Wrapper component for paginated destinations
 const PaginatedDestinations = () => {
@@ -80,6 +81,8 @@ const AppRoutes = () => {
         />
         <Route path="/destinations/:destinationID" element={<DestinationDetail />} />
       </Route>
+
+      <Route path="/about-us" element={ <AboutPage />} />
       <Route
         path="/login"
         element={
