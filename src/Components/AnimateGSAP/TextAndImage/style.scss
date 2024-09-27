@@ -1,0 +1,66 @@
+.textImageGSAP{
+    background-image: url("../../../assets/background-cus-review.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    .textImageGSAP__container {
+        height: auto;
+        padding-top: 100px;
+        overflow: hidden;
+        position: relative;
+      }
+      .img-wrapper-l,
+      .img-wrapper-r {
+        //height: 33.3%;
+        position: relative;
+      }
+      .img-wrapper-l {
+        display: flex;
+        justify-content: flex-start;
+        transition: all 0.4s ease;
+      }
+      .img-wrapper-r {
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.4s ease;
+      }
+      .textImageGSAP__container img {
+        height: 100%;
+        width: auto;
+        position: relative;
+      }
+
+      .textImageGSAP__container p{
+        font-size: 10rem;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: var(--color-black);
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      
+      .image-container {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-black);
+      }
+      
+      .image-container img {
+        width: 25%;
+      }
+      
+      .image-container p {
+        font-size: 2rem;
+      }
+      
+      .image-container .text {
+        position: absolute;
+        left: 40px;
+        color: var(--color-black);
+      }
+}

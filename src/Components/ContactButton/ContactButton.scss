@@ -1,0 +1,166 @@
+.contact-button-social {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(130%);
+  transition: all 0.5s ease-out;
+
+  &.visible{
+    transform: translate(0);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 120px;
+  }
+
+  .contact-button-social-box {
+    margin-top: 10px;
+    max-width: 42px;
+    min-width: 42px;
+    max-height: 42px;
+    min-height: 42px;
+    position: relative;
+
+    a {
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .contact-button-hoverbox {
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translate(-100%, -50%);
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 4px;
+      opacity: 0;
+      transition: 0.5s;
+      padding: 5px 10px;
+      width: max-content;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 5px;
+        height: 10px;
+        right: -4px;
+        top: 39%;
+        background: rgba(0, 0, 0, 0.75);
+        clip-path: path(
+          "M4.08579 6.41421C4.86684 5.63316 4.86683 4.36684 4.08579 3.58579L0.5 0C0.5 0 0.5 4 0.5 5C0.5 6 0.5 10 0.5 10L4.08579 6.41421Z"
+        );
+      }
+    }
+  }
+
+  .contact-button-social-box:hover {
+    .contact-button-hoverbox {
+      opacity: 1;
+    }
+  }
+
+  .button-wrapper{
+    transform: translateX(130%);
+    visibility: hidden;
+    transition: all 0.8s ease;
+
+    &.open{
+        transform: translate(0);
+        visibility: visible;
+    }
+  }
+
+  .contact-button-ring {
+    button {
+      max-width: 42px;
+      min-width: 42px;
+      max-height: 42px;
+      min-height: 42px;
+      position: relative;
+      border-radius: 50%;
+      border: 1px solid var(--primarycolor);
+      background-color: var(--primarycolor);
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      color: var(--color-white);
+
+      svg{
+        fill: var(--color-white);
+        width: 18px;
+        height: auto;
+        animation: iconSkew 1s infinite ease-out;
+
+        &.arrow-icon{
+            animation: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes iconSkew{
+    0%{
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+    10%{
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    20%{
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    30%{
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    40%{
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    50%{
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+    100%{
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+}

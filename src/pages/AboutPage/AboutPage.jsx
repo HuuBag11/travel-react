@@ -6,7 +6,13 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./AboutPage.scss";
 import { ImageTextIntro } from "../../Components/ImageTextIntro/ImageTextIntro";
+
 import { CgPlayButtonO } from "react-icons/cg";
+import { RiArrowDownWideFill } from "react-icons/ri";
+import { Portiforlio } from "../../Components/Portfolio/Portiforlio";
+import { BookingStep } from "../../Components/BookingStep/BookingStep";
+import { Footer } from "../../Components/Footer/Footer"
+import { TextImageGSAP } from "../../Components/AnimateGSAP/TextAndImage";
 
 const imageBanner =
   "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -50,8 +56,10 @@ export const AboutPage = () => {
   const handleOpenPopup = () => {
     setOpenPopup(!openPopup);
 
-    if (openPopup) {
+    if (!openPopup) {
       videoRef.current.play();
+    }else{
+      videoRef.current.pause();
     }
   };
 
@@ -85,6 +93,11 @@ export const AboutPage = () => {
         <Link to="/booking" className="btn-white">
           Booking
         </Link>
+
+        <div className="scroll-down">
+          Scroll down
+          <RiArrowDownWideFill />
+        </div>
 
         <div className="circle-text" ref={circleTextRef}>
           <div className="text" ref={textRef}>
@@ -128,6 +141,9 @@ export const AboutPage = () => {
           </div>
         </div>
       </div>
+
+      <BookingStep />
+
       {dataIntro.map((item, index) => {
         const imagePosition = index % 2 === 0 ? "left" : "right";
 
@@ -143,6 +159,10 @@ export const AboutPage = () => {
           />
         );
       })}
+
+      <TextImageGSAP />
+
+      <Footer />
     </div>
   );
 };
